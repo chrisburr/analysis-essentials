@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Persistent screen or tmux session | LHCb analysis essentials</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.4">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="../css/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../shell/shell2.html" />
+    
+    
+    <link rel="prev" href="../shell/screen2.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.3"
+        data-chapter-title="Persistent screen or tmux session"
+        data-filepath="shell/persistent-screen.md"
+        data-basepath=".."
+        data-revision="Wed Dec 02 2015 13:33:04 GMT+0000 (UTC)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="shell/shell.html">
+            
+                
+                    <a href="../shell/shell.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Shell
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="shell/screen.html">
+            
+                
+                    <a href="../shell/screen.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Using screen to keep things running
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="shell/screen2.html">
+            
+                
+                    <a href="../shell/screen2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Advanced screen topics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="shell/persistent-screen.html">
+            
+                
+                    <a href="../shell/persistent-screen.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Persistent screen or tmux session
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="shell/shell2.html">
+            
+                
+                    <a href="../shell/shell2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Advanced shell topics
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="git/git.html">
+            
+                
+                    <a href="../git/git.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Version control with Git
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="git/basics.html">
+            
+                
+                    <a href="../git/basics.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Basics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="git/gitlab.html">
+            
+                
+                    <a href="../git/gitlab.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        CERN Gitlab
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >LHCb analysis essentials</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="persistent-screen-or-tmux-session-on-lxplus">Persistent screen or tmux session on lxplus</h2>
+<h3 id="setting-up-passwordless-kerberos-token">Setting up password-less kerberos token</h3>
+<p>In order for the kerberos token to be refreshed automatically, it must be possible to do so without a password.
+Therefore, we create a keytab (similar to a private ssh key) on lxplus using the keytab utility. After starting it by typing <code>ktutil</code>, type the following three lines into the prompt and confirm the first two steps with your password.</p>
+<pre><code class="lang-bash">add_entry -password -p USERNAME@CERN.CH -k <span class="hljs-number">1</span> <span class="hljs-operator">-e</span> arcfour-hmac-md5
+add_entry -password -p USERNAME@CERN.CH -k <span class="hljs-number">1</span> <span class="hljs-operator">-e</span> aes256-cts
+wkt USERNAME.keytab
+</code></pre>
+<p>and close the <code>ktutil</code> prompt with <code>Ctrl+D</code>.
+This will create a file called USERNAME.keytab in the current directory. It is strongly recommended to store this file in a directory to which only you have access as anyone who obtains a copy of this file can use it to obtain tokens in your name.</p>
+<h3 id="making-use-of-the-keytab">Making use of the keytab</h3>
+<p>This keytab file can now be used to obtain kerberos tokens without having to type a password:</p>
+<pre><code class="lang-bash">kinit -k -t USERNAME.keytab USERNAME@CERN.CH
+</code></pre>
+<p>where <code>-k</code> tells <code>kinit</code> to use a keytab file and <code>-t USERNAME.keytab</code> where this keytab actually is.</p>
+<h3 id="using-k5reauth-to-automatically-refresh-your-kerberos-token">Using k5reauth to automatically refresh your kerberos token</h3>
+<p>To create a permanent session of <code>tmux</code> or <code>screen</code>, the <code>k5reauth</code> command is used, which by default creates a new shell and attaches it as a child to itself and keeps renewing the kerberos token for its children. <code>k5reauth</code> can start processes other than a new shell by specifying the program you want to start as an argument </p>
+<pre><code class="lang-bash">k5reauth <span class="hljs-operator">-f</span> -i <span class="hljs-number">3600</span> -p .... -- &lt;<span class="hljs-built_in">command</span>&gt;
+</code></pre>
+<p>To start <code>screen</code> or <code>tmux</code> run:</p>
+<pre><code class="lang-bash">k5reauth <span class="hljs-operator">-f</span> -i <span class="hljs-number">3600</span> -p USERNAME -k /path/to/USERNAME.keytab -- tmux new-session <span class="hljs-operator">-s</span> NAME
+</code></pre>
+<p>which will create a <code>tmux</code> session whose kerberos token is refreshed automatically every 3600 seconds. When attaching back to the process, a simple</p>
+<pre><code class="lang-bash">tmux attach-session -t NAME
+</code></pre>
+<p>is sufficient.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../shell/screen2.html" class="navigation navigation-prev " aria-label="Previous page: Advanced screen topics"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../shell/shell2.html" class="navigation navigation-next " aria-label="Next page: Advanced shell topics"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"katex":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

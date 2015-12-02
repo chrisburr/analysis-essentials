@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Advanced screen topics | LHCb analysis essentials</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.4">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="../css/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../shell/persistent-screen.html" />
+    
+    
+    <link rel="prev" href="../shell/screen.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.2"
+        data-chapter-title="Advanced screen topics"
+        data-filepath="shell/screen2.md"
+        data-basepath=".."
+        data-revision="Wed Dec 02 2015 13:33:04 GMT+0000 (UTC)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="shell/shell.html">
+            
+                
+                    <a href="../shell/shell.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Shell
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="shell/screen.html">
+            
+                
+                    <a href="../shell/screen.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Using screen to keep things running
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="shell/screen2.html">
+            
+                
+                    <a href="../shell/screen2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Advanced screen topics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="shell/persistent-screen.html">
+            
+                
+                    <a href="../shell/persistent-screen.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Persistent screen or tmux session
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="shell/shell2.html">
+            
+                
+                    <a href="../shell/shell2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Advanced shell topics
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="git/git.html">
+            
+                
+                    <a href="../git/git.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Version control with Git
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="git/basics.html">
+            
+                
+                    <a href="../git/basics.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Basics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="git/gitlab.html">
+            
+                
+                    <a href="../git/gitlab.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        CERN Gitlab
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >LHCb analysis essentials</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="advanced-screen-topics">Advanced screen topics</h2>
+<h3 id="finding-lost-screens">Finding lost screens</h3>
+<p>Once you start a <code>screen</code> session you need to remember which
+<code>lxplus</code> node it is running on. If you forget to note that down
+you can use the following little snippet to find any <code>screen</code>
+sessions running on <code>lxplus</code> nodes:</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> $(seq <span class="hljs-operator">-f</span> <span class="hljs-string">&quot;%04g&quot;</span> <span class="hljs-number">1</span> <span class="hljs-number">500</span>); <span class="hljs-keyword">do</span>
+ ssh -o ConnectTimeout=<span class="hljs-number">10</span> -o PreferredAuthentications=gssapi-with-mic,gssapi -o GSSAPIAuthentication=yes -o StrictHostKeyChecking=no -o LogLevel=quiet lxplus<span class="hljs-variable">$i</span>.cern.ch <span class="hljs-string">&quot;(screen -list | head -1 | grep -q &apos;There is a screen on&apos;) &amp;&amp; hostname &amp;&amp; screen -list&quot;</span>
+<span class="hljs-keyword">done</span>
+</code></pre>
+<p>This will connect to the first 500 lxplus nodes in
+turn, checking if a <code>screen</code> session is running and if
+yes prints the hostname and output of <code>screen -list</code>.</p>
+<h3 id="using-tabs-in-screen">Using tabs in screen</h3>
+<p>Screen supports some features beyond detaching a session. A very useful feature is different sessions in tab pages, all within a single instance of <code>screen</code>. 
+In order to maximise the usefulness of this feature, you need to set the screen status bar. The simplest way to do this is by appending the following line to the file <code>~/.screenrc</code> (create it if it doesn&apos;t already exist):</p>
+<pre><code># Status lines
+hardstatus off
+hardstatus alwayslastline
+hardstatus string &apos;%{= BG}%{.g}[ %{.G}%H %{.g}][ %{= Bw}%?%-Lw%?%{Yr}%{.k}%n*%f%? %t%?%?(%u)%?%{.r}%{Bw}%?%+Lw%? %{.g}%=][%{.W} %Y-%m-%d %c %{.g}]&apos;
+</code></pre><p>Note that this has predefined colours and layout that you can easily change yourself, see eg. this <a href="http://sourceopen.com/2014/06/09/gnu-screen-status-bar-tips-tricks-basics/" target="_blank">detailed discussion</a>.</p>
+<p>The following commands should help you get started using multiple tabs in a screen window. Note that <code>^a</code> stands for <code>Ctrl-a</code> in this list.</p>
+<ul>
+<li>Create a new tab: <code>^a c</code></li>
+<li>Switch to tab number #: <code>^a #</code> (where # is a digit)</li>
+<li>Switch to the last visited tab: <code>^a ^a</code></li>
+<li>Close a tab: log out of the shell with <code>^d</code></li>
+<li>Kill a tab: <code>^a k</code> (only use if normal logout through <code>^d</code> doesn&apos;t work because a process has crashed)</li>
+<li>Change a tab&apos;s name: <code>^a A</code></li>
+</ul>
+<p>As one last note, you may find it easier if the tab numbers start with 1, rather than 0. To accomplish this, append the following lines to the aforementioned file <code>~/.screenrc</code>:</p>
+<pre><code># Start with window 1 (instead of 0)
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10
+screen 1
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../shell/screen.html" class="navigation navigation-prev " aria-label="Previous page: Using screen to keep things running"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../shell/persistent-screen.html" class="navigation navigation-next " aria-label="Next page: Persistent screen or tmux session"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"katex":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

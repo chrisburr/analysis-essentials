@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Using screen to keep things running | LHCb analysis essentials</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.4">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="../css/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../shell/screen2.html" />
+    
+    
+    <link rel="prev" href="../shell/shell.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.1"
+        data-chapter-title="Using screen to keep things running"
+        data-filepath="shell/screen.md"
+        data-basepath=".."
+        data-revision="Wed Dec 02 2015 13:33:04 GMT+0000 (UTC)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="shell/shell.html">
+            
+                
+                    <a href="../shell/shell.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Shell
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1" data-path="shell/screen.html">
+            
+                
+                    <a href="../shell/screen.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Using screen to keep things running
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="shell/screen2.html">
+            
+                
+                    <a href="../shell/screen2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Advanced screen topics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="shell/persistent-screen.html">
+            
+                
+                    <a href="../shell/persistent-screen.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Persistent screen or tmux session
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="shell/shell2.html">
+            
+                
+                    <a href="../shell/shell2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Advanced shell topics
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="git/git.html">
+            
+                
+                    <a href="../git/git.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Version control with Git
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="git/basics.html">
+            
+                
+                    <a href="../git/basics.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Basics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="git/gitlab.html">
+            
+                
+                    <a href="../git/gitlab.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        CERN Gitlab
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >LHCb analysis essentials</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="using-screen-to-keep-things-running">Using screen to keep things running</h2>
+<h3 id="learning-objectives-objectives">Learning Objectives {.objectives}</h3>
+<blockquote>
+<ul>
+<li>Create a new <code>screen</code> session</li>
+<li>Disconnect from a <code>screen</code> session</li>
+<li>Reconnect to an existing <code>screen</code> session</li>
+<li>End an existing <code>screen</code> session</li>
+<li>Handling of Kerberos tokens</li>
+</ul>
+</blockquote>
+<p>Often we want to run a program for a long time on a computer we
+connected to via <code>ssh</code>, like the <code>lxplus</code> machines. The <code>screen</code>
+program allows you to keep programs running on the remote computer
+even if you disconnect from it. For example when putting your laptop
+to sleep or losing wifi.</p>
+<p>Connect to <code>lxplus</code>:</p>
+<pre><code class="lang-bash">$ ssh lxplus.cern.ch
+</code></pre>
+<p>You can start <code>screen</code> by simply typing its name:</p>
+<pre><code class="lang-bash">$ screen
+</code></pre>
+<p>Once you do this it will look as if nothing has happened. However you
+now have a fresh terminal inside what is refered to as a &quot;screen
+session&quot;. Let&apos;s type some commands that generate some output:</p>
+<pre><code class="lang-bash">$ uptime
+</code></pre>
+<pre><code class="lang-output"> 11:48:02 up 15 days, 20:36, 105 users,  load average: 2.26, 2.10, 3.16
+</code></pre>
+<pre><code class="lang-bash">$ date
+</code></pre>
+<pre><code class="lang-output">Thu Apr 16 11:48:32 CEST 2015
+</code></pre>
+<p>To disconnect from this session press <code>Ctrl-a d</code>. We are now back to
+the terminal that we first started in. You can check that your
+<code>screen</code> session is still running by typing <code>screen -list</code>, which will
+list all active sessions:</p>
+<pre><code class="lang-bash">$ screen -list
+</code></pre>
+<pre><code class="lang-output">There is a screen on:
+      25593.pts-44.lxplus0234   (Detached)
+1 Socket in /var/run/screen/S-thead.
+</code></pre>
+<p>To reconnect to the session you use <code>screen -rD</code>. When there is just
+one session running (like now) then it will reconnect you to that
+session. Try it and you should see the date and time output by the
+<code>date</code> command we ran earlier.</p>
+<p>When you have more than one session you need to provide the name of
+the session as an argument to <code>screen -rD</code>. The name of the above
+session is: <code>25593.pts-44.lxplus0234</code>. You can reconnect to it with:</p>
+<pre><code class="lang-bash">$ screen -rD <span class="hljs-number">25593</span>.pts-<span class="hljs-number">44</span>.lxplus0234
+</code></pre>
+<p>To end a <code>screen</code> session you are currently connected to, simply press
+<code>Ctrl-d</code>. Just like you would to disconnect from a <code>ssh</code> session.</p>
+<p>A <code>screen</code> session is tied to a specific computer. This means you need
+to remember which computer you connected to. Even if your <code>screen</code>
+session keeps running, you can only resume it from the same machine as
+you started it.</p>
+<p>When connecting to <code>lxplus</code> you are assigned to a random computer, but you can find out its name with <code>hostname</code>:</p>
+<pre><code class="lang-bash">$ hostname
+</code></pre>
+<pre><code class="lang-output">lxplus0081.cern.ch
+</code></pre>
+<p>This tells you that the computer you are connected to is called
+<code>lxplus0081.cern.ch</code>. Later on you can re-connect to exactly this
+machine with:</p>
+<pre><code class="lang-bash">$ ssh lxplus0081.cern.ch
+</code></pre>
+<p>Another complication are your kerberos tokens. These typically
+expire as soon as you disconnect from a <code>lxplus</code> machine. This means
+the program you left running inside the <code>screen</code> session will
+suddenly not be able to write to any files in your home directory
+anymore. This is particularly annoying if you are running <code>ganga</code>
+in your screen session.</p>
+<p>One way to stop your tokens from expiring is to type <code>kinit</code>
+when you first start a new <code>screen</code> session. The tokens you get
+this way will survive you disconnecting. However they will
+expire after 24 hours, so you will have to type <code>kinit</code> again
+to renew them if you leave <code>screen</code> running for longer than
+24 hours.</p>
+<pre><code class="lang-bash">$ screen
+<span class="hljs-comment"># now inside the screen session</span>
+$ kinit
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../shell/shell.html" class="navigation navigation-prev " aria-label="Previous page: Shell"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../shell/screen2.html" class="navigation navigation-next " aria-label="Next page: Advanced screen topics"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"katex":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

