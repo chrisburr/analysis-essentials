@@ -5,6 +5,7 @@
   "plugins": [
     "katex",
     "panels@git+https://github.com/lhcb/gitbook-plugin-panels.git#master",
-    "collapsible-menu"
+    "collapsible-menu",
+    "block-align"
   ]
 }
