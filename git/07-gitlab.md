@@ -14,13 +14,11 @@ questions:
 {% prereq "Prerequisites" %}
 - A SSH Key added to your CERN GitLab account, see [here](https://docs.gitlab.com/ce/ssh/README.html)
   for instructions.
-- You can test if this is working by runnning `ssh git@gitlab.cern.ch -p 7999`.
-  Everything is working correctly if the output of the command is something
-  similar to:
+- You can test if this is working by runnning `ssh git@gitlab.cern.ch -T -p 7999`.
+  Everything is working correctly if the output of the command is:
 
 ```
-Welcome to GitLab, Your Name!
-Connection to gitlab.cern.ch closed.
+Welcome to GitLab, Santa Claus!
 ```
 {% endprereq %}
 
@@ -50,17 +48,24 @@ Name your repository "planets" and then click "Create project":
 
 ![Creating a Repository on CERN GitLab (Step 2)](fig/gitlab-create-repo-02.png)
 
+Here we can see one of the main reasons why you might want to use GitLab at CERN
+instead of an external service: every CERN user can create a *private*
+repository, meaning its access can be restricted to the persons you want.
+External services such as [GitHub](https://github.com) only allow you to create
+*public repositories* [unless you pay for it](https://github.com/pricing). Note
+that private repositories are very useful when collaborating for a paper.
+
 As soon as the repository is created, GitLab displays a page with a URL and some
 information on how to configure your local repository:
 
 ![Creating a Repository on CERN GitLab (Step 3)](fig/gitlab-create-repo-03.png)
 
-This effectively does the following on CERN's servers:
+This is roughly equivalent to perform the following on CERN's servers:
 
 ```bash
 $ mkdir planets
 $ cd planets
-$ git init
+$ git init --bare
 ```
 
 Our local repository still contains our earlier work on `mars.txt`, but the
@@ -90,6 +95,8 @@ We can check that the command has worked by running `git remote -v`:
 
 ```bash
 $ git remote -v
+```
+```
 origin  ssh://git@gitlab.cern.ch:7999/vlad/planets.git (fetch)
 origin  ssh://git@gitlab.cern.ch:7999/vlad/planets.git (push)
 ```
@@ -102,6 +109,8 @@ our local repository to the repository on GitLab:
 
 ```bash
 $ git push origin master
+```
+```
 Counting objects: 9, done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (6/6), done.
@@ -129,6 +138,8 @@ We can pull changes from the remote repository to the local one as well:
 
 ```bash
 $ git pull origin master
+```
+```
 From https://gitlab.cern.ch/vlad/planets
  * branch            master     -> FETCH_HEAD
 Already up-to-date.
