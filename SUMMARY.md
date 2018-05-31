@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
    * [Contributing](CONTRIBUTING.md)
+   * [Code of conduct](CONDUCT.md)
 
 ----
 
