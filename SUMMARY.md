@@ -1,6 +1,7 @@
 # LHCb analysis essentials
 
 * [Introduction](README.md)
+   * [Contributing](CONTRIBUTING.md)
 
 ----
 

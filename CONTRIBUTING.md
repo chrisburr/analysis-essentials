@@ -1,9 +1,12 @@
-analysis-essentials is an open source project,
+# Contributing
+
+[analysis-essentials][repo] is an open source project,
 and we welcome contributions of all kinds:
-new lessons,
-fixes to existing material,
-bug reports,
-and reviews of proposed changes are all equally welcome.
+
+* New lessons;
+* Fixes to existing material;
+* Bug reports; and
+* Reviews of proposed changes.
 
 By contributing,
 you are agreeing that we may redistribute your work under
@@ -29,26 +32,28 @@ You also agree to abide by our
 
 ## Dependencies
 
-To build the lessons locally install the following:
+To build the lessons locally, install the following:
 
-1. [Install node.js and npm](https://docs.npmjs.com/)
+1. [Gitbook](https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md)
 
-2. [Install gitbook](https://github.com/GitbookIO/gitbook) with `npm install gitbook-cli -g`
+Install the Gitbook plugins:
 
-3. To convert Markdown files into HTML pages in the `_book` directory, go
-   into the root directory of your lesson and run:
+```shell
+$ gitbook install
+```
 
-   ~~~
-   $ make
-   ~~~
+Then (from the analysis-essentials directory) build the pages and start a web server to host them:
 
-   Now open `_book/index.html` in a browser to see your changes.
+```shell
+$ gitbook serve
+```
+You can see your local version by using a web-browser to navigate to `http://localhost:4000` or wherever it says it's serving the book.
 
 [conduct]: CONDUCT.md
+[repo]: https://github.com/lhcb/analysis-essentials
 [issues]: https://github.com/lhcb/analysis-essentials/issues
 [license]: LICENSE.md
 [pro-git-chapter]: http://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project
 [gh-fork]: https://help.github.com/articles/fork-a-repo/
 [gh-pull]: https://help.github.com/articles/using-pull-requests/
 [gh-fork-pull]: https://help.github.com/articles/using-pull-requests/#fork--pull
-[swc-lessons]: http://software-carpentry.org/lessons.html
